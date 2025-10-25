@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mentor Dashboard - UGC Internship Credit Portal</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: "Inter", Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f9fafb;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ===== NAVBAR ===== */
+    nav {
+      background-color: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 700;
+      color: #2563eb;
+      font-family: "Poppins", sans-serif;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #374151;
+      font-weight: 500;
+      transition: color 0.2s, border-bottom 0.2s;
+      padding-bottom: 5px;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #2563eb;
+      border-bottom: 2px solid #2563eb;
+    }
+
+    /* ===== MAIN CONTENT ===== */
+    .container {
+      width: 85%;
+      max-width: 1100px;
+      margin: 40px auto;
+    }
+
+    h1 {
+      font-size: 28px;
+      color: #111827;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    p.subtitle {
+      font-size: 15px;
+      color: #6b7280;
+      margin-bottom: 25px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
+      padding: 25px;
+      margin-bottom: 30px;
+    }
+
+    label {
+      display: block;
+      font-size: 14px;
+      color: #374151;
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      font-size: 14px;
+      margin-bottom: 15px;
+      transition: border-color 0.2s;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #2563eb;
+      box-shadow: 0 0 0 2px #2563eb20;
+    }
+
+    textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    button {
+      background-color: #2563eb;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 15px;
+      border-radius: 6px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    button:hover {
+      background-color: #1d4ed8;
+    }
+
+    .button-container {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    /* ===== TABLE SECTION ===== */
+    .table-section {
+      background-color: #f1f5f9;
+      border-radius: 10px;
+      padding: 15px;
+    }
+
+    .table-section h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #1e3a8a;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    th,
+    td {
+      text-align: left;
+      padding: 12px 15px;
+      border-bottom: 1px solid #e5e7eb;
+      font-size: 14px;
+    }
+
+    th {
+      background-color: #f9fafb;
+      color: #374151;
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav>
+    <div class="logo">UGC Internship Credit Portal</div>
+    <div class="nav-links">
+      <a href="#">Student Dashboard</a>
+      <a href="#" class="active">Mentor Dashboard</a>
+    </div>
+  </nav>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <div class="container">
+    <h1>Mentor Dashboard</h1>
+    <p class="subtitle">Evaluate internship submissions and manage credit assessments</p>
+
+    <div class="card">
+      <label>Search by APAAR ID or Internship ID</label>
+      <input type="text" placeholder="Enter APAAR ID or Internship ID to search" />
+
+      <label>Equivalent Keywords</label>
+      <textarea placeholder="Enter comma-separated keywords (e.g., cloud computing, AWS, DevOps, database management, API development)"></textarea>
+
+      <div class="button-container">
+        <button>▶ Run & Push to ABC</button>
+      </div>
+    </div>
+
+    <div class="table-section">
+      <h3>Evaluation Results</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Ref ID</th>
+            <th>WAMP</th>
+            <th>Composite Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Internship Project 1</td>
+            <td>AP1234</td>
+            <td>80%</td>
+            <td>4.5</td>
+          </tr>
+          <tr>
+            <td>Internship Project 2</td>
+            <td>AP5678</td>
+            <td>75%</td>
+            <td>4.0</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</body>
+</html>

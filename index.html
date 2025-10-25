@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UGC Certificate Validator</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen">
+  <div class="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md">
+    <h1 class="text-2xl font-bold text-center text-indigo-600 mb-6">UGC Certificate Validator</h1>
+
+    <form id="uploadForm" action="/validate" method="post" enctype="multipart/form-data">
+      <label class="block text-gray-700 font-medium mb-2">Upload Certificate:</label>
+      <input type="file" name="file" id="fileInput" class="border p-2 w-full mb-4" required />
+      <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-2 rounded-lg">Validate Document</button>
+    </form>
+
+    <div id="resultBox" class="hidden mt-6 border p-4 rounded-lg bg-gray-50">
+      <h2 class="text-lg font-semibold text-gray-800 mb-2">Validation Result:</h2>
+      <p><strong>Status:</strong> <span id="status"></span></p>
+      <p><strong>Similarity:</strong> <span id="similarity"></span>%</p>
+      <p><strong>Name:</strong> <span id="name"></span></p>
+      <p><strong>Course:</strong> <span id="course"></span></p>
+      <p><strong>Company:</strong> <span id="company"></span></p>
+      <p><strong>Duration:</strong> <span id="duration"></span></p>
+      <p><strong>Domain:</strong> <span id="domain"></span></p>
+      <p><strong>Date of Certification:</strong> <span id="date_of_joining"></span></p>
+    </div>
+
+    <div id="errorBox" class="hidden mt-4 text-red-600"></div>
+  </div>
+
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      try {
+        const serverResult = JSON.parse('{{ result|tojson|safe if result is defined else "null" }}');
+        if (serverResult) {
+          document.getElementById("resultBox").classList.remove("hidden");
+          document.getElementById("status").textContent = serverResult.status || "-";
+          document.getElementById("similarity").textContent = serverResult.similarity || "-";
+          document.getElementById("name").textContent = serverResult.name || "-";
+          document.getElementById("course").textContent = serverResult.course || "-";
+          document.getElementById("company").textContent = serverResult.company || "-";
+          document.getElementById("duration").textContent = serverResult.duration || "-";
+          document.getElementById("domain").textContent = serverResult.domain || "-";
+          document.getElementById("date_of_joining").textContent = serverResult.date_of_joining || "-";
+        }
+      } catch (e) {
+      }
+    });
+  </script>
+</body>
+</html>

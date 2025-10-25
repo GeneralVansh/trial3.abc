@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Credit Computation Module</title>
+<style>
+  body { font-family: Arial; text-align: center; background: #f2f6fc; padding: 30px; }
+  h1 { color: #1a73e8; }
+  input, button { padding: 10px; margin: 10px; width: 200px; }
+  #result { margin-top: 20px; font-size: 18px; font-weight: bold; color: #333; }
+  .box { background: white; border-radius: 10px; padding: 20px; display: inline-block; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+</style>
+</head>
+<body>
+  <h1>💳 Credit Computation Module (CC)</h1>
+  <div class="box">
+    <p>Enter your internship details below:</p>
+    <label>Total Hours:</label><br>
+    <input type="number" id="hours" placeholder="e.g. 200"><br>
+    <label>Duration (weeks):</label><br>
+    <input type="number" id="weeks" placeholder="e.g. 8"><br>
+    <button onclick="calculateCredit()">Calculate Credits</button>
+
+    <div id="result"></div>
+  </div>
+
+  <script>
+    function calculateCredit() {
+      const hours = parseInt(document.getElementById("hours").value);
+      const weeks = parseInt(document.getElementById("weeks").value);
+      let result = "";
+
+      if (isNaN(hours) || isNaN(weeks)) {
+        result = "⚠ Please enter both hours and weeks.";
+      } else if (weeks < 2) {
+        result = "❌ Not eligible. Internship must be at least 2 weeks.";
+      } else {
+        let credits = Math.round(hours / 120);
+        if (credits > 6) credits = 6;
+        result = ✅ You earned ${credits} credits.;
+      }
+
+      document.getElementById("result").innerText = result;
+    }
+  </script>
+</body>
+</html>
+ 
+
+
+@Igen

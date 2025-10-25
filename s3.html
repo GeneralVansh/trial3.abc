@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Credit Evaluation System</title>
+<style>
+  body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+    width: 380px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+  }
+
+  h1 {
+    margin-bottom: 15px;
+    font-size: 26px;
+    color: #ffda79;
+  }
+
+  label {
+    display: block;
+    margin-top: 10px;
+    font-weight: 500;
+  }
+
+  input {
+    width: 90%;
+    padding: 10px;
+    margin-top: 6px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+  }
+
+  button {
+    margin-top: 20px;
+    padding: 10px 25px;
+    background: #ffda79;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #222;
+    transition: 0.3s;
+  }
+
+  button:hover {
+    background: #ffeaa7;
+    transform: scale(1.05);
+  }
+
+  #result {
+    margin-top: 25px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .credit-value {
+    color: #00ffb3;
+    font-weight: bold;
+  }
+
+  .status {
+    color: #ffd700;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>💳 Smart Credit Evaluation</h1>
+
+    <label>Total Internship Hours:</label>
+    <input type="number" id="hours" placeholder="e.g. 300">
+
+    <label>Duration (weeks):</label>
+    <input type="number" id="weeks" placeholder="e.g. 8">
+
+    <label>Mentor Rating (1 - 10):</label>
+    <input type="number" id="rating" placeholder="e.g. 8">
+
+    <button onclick="calculateCredits()">Calculate Credits</button>
+
+    <div id="result"></div>
+  </div>
+
+  <script>
+    function calculateCredits() {
+      const hours = parseFloat(document.getElementById("hours").value);
+      const weeks = parseFloat(document.getElementById("weeks").value);
+      const rating = parseFloat(document.getElementById("rating").value);
+      const resultDiv = document.getElementById("result");
+
+      if (isNaN(hours) || isNaN(weeks) || isNaN(rating)) {
+        resultDiv.innerHTML = "⚠ Please enter all values correctly.";
+        return;
+      }
+
+      let credits = 0;
+      let status = "";
+
+      if (weeks < 2) {
+        credits = 0;
+        status = "❌ Not Eligible (Less than 2 weeks)";
+      } 
+      else if (weeks >= 2 && weeks < 4) {
+        credits = Math.round((hours / 120) * 0.5);
+        status = "🟡 Partial Credit (Short Duration)";
+      } 
+      else {
+        credits = Math.round(hours / 120);
+        status = "✅ Full Credit (Duration OK)";
+      }
+
+      // Add bonus based on mentor rating
+      if (rating >= 9) {
+        credits += 1;
+      } else if (rating >= 7) {
+        credits += 0.5;
+      }
+
+      // Cap credits at 6
+      if (credits > 6) credits = 6;
+
+      resultDiv.innerHTML = `
+        <p class="status">${status}</p>
+        <p>You earned <span class="credit-value">${credits}</span> credits.</p>
+        <p>Mentor Rating Bonus Applied: <strong>${rating >= 7 ? "Yes" : "No"}</strong></p>
+      `;
+    }
+  </script>
+</body>
+</html>
