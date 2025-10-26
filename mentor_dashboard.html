@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Praktiki — Mentor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h2>Mentor Dashboard (Demo)</h2>
+      <label>Internship ID or APAAR ID</label><input id="searchKey" />
+      <label>Keywords (optional)</label><input id="keywords" />
+      <div style="display:flex;gap:8px;margin-top:8px">
+        <button id="runBtn">Run WMD & Push (success)</button>
+        <button id="runPending">Run & Push (pending)</button>
+        <button id="runFail">Run & Push (failure)</button>
+      </div>
+      <pre id="out" style="margin-top:12px"></pre>
+    </div>
+  </div>
+<script>
+async function findIntern(key){
+  // naive: we don't have list endpoint; in demo, users paste internship id returned after submit
+  return key;
+}
+document.getElementById('runBtn').addEventListener('click', ()=>run('success'));
+document.getElementById('runPending').addEventListener('click', ()=>run('pending'));
+document.getElementById('runFail').addEventListener('click', ()=>run('failure'));
+async function run(mode){
+  const key = document.getElementById('searchKey').value.trim();
+  if(!key){ alert('Enter internship id'); return; }
+  const kws = document.getElementById('keywords').value;
+  const res = await fetch('http://127.0.0.1:8000/mentor/run_and_push/' + encodeURIComponent(key) + '?keywords=' + encodeURIComponent(kws || '') + '&mode=' + mode, {method:'POST'});
+  const text = await res.text();
+  document.getElementById('out').innerText = text;
+}
+</script>
+</body>
+</html>
