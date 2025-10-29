@@ -25,7 +25,7 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
   e.preventDefault();
   const username = document.getElementById('username').value;
   const password = document.getElementById('password').value;
-  const res = await fetch('https://freelancebackendd.vercel.app/login', {
+  const res = await fetch('https://freelance-backend-y0el.onrender.com/login', {
     method: 'POST',
     body: new URLSearchParams({username, password})
   });
