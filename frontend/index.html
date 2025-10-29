@@ -25,7 +25,7 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
   e.preventDefault();
   const username = document.getElementById('username').value;
   const password = document.getElementById('password').value;
-  const res = await fetch('https://freelancebackend-zeta.vercel.app/login', {
+  const res = await fetch('https://freelancebackendd.vercel.app/login', {
     method: 'POST',
     body: new URLSearchParams({username, password})
   });
