@@ -37,7 +37,7 @@ document.getElementById('internForm').addEventListener('submit', async function(
     total_hours: parseInt(document.getElementById('total_hours').value,10),
     internship_text: document.getElementById('internship_text').value
   };
-  const res = await fetch('http://127.0.0.1:8000/submit_internship', {
+  const res = await fetch('https://freelance-backend-y0el.onrender.com/submit_internship', {
     method: 'POST',
     headers: {'Content-Type':'application/json'},
     body: JSON.stringify(body)
