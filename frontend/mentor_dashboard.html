@@ -32,7 +32,7 @@ async function run(mode){
   const key = document.getElementById('searchKey').value.trim();
   if(!key){ alert('Enter internship id'); return; }
   const kws = document.getElementById('keywords').value;
-  const res = await fetch('http://127.0.0.1:8000/mentor/run_and_push/' + encodeURIComponent(key) + '?keywords=' + encodeURIComponent(kws || '') + '&mode=' + mode, {method:'POST'});
+  const res = await fetch('https://freelance-backend-y0el.onrender.com/mentor/run_and_push/' + encodeURIComponent(key) + '?keywords=' + encodeURIComponent(kws || '') + '&mode=' + mode, {method:'POST'});
   const text = await res.text();
   document.getElementById('out').innerText = text;
 }
