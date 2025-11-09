@@ -1,0 +1,115 @@
+Build me a complete, runnable demo web application called
+"UGC Internship Credit Portal (Full-stack Demo)" with these exact extended requirements.
+This is an enhanced version of the earlier full-stack spec — add a certificate auto-extraction
+flow that auto-fills the student form after upload, plus separate pages (File Upload page,
+Student Form page, Mentor login page) and a navbar linking them.
+
+GENERAL: Must be a Python Flask app (backend) + plain HTML/CSS/JS frontend.
+Provide full source, README, requirements.txt, sample data, and step-by-step run instructions.
+No paid external services required (ABC must be simulated).
+
+--- NEW & UPDATED FEATURES TO ADD (copy exactly):
+
+A. Certificate Auto-Extraction & Auto-Fill (core requirement)
+- When a user navigates to the **File Upload** page (`/upload`) they can:
+  - Upload a certificate file (image .png/.jpg/.jpeg, scanned PDF, searchable PDF, .docx) OR
+  - Paste the certificate text if available.
+- Backend must extract important fields automatically from the uploaded certificate using:
+  - OCR (pytesseract + pdfplumber/pdf2image fallback) for images/scanned PDFs.
+  - docx / txt read for other formats.
+  - A small regex + heuristics layer to detect fields: **student name, APAAR ID (if present), institution code (if present), organization name, internship title, start date, end date, total hours, certificate id, signatory name/email, GST/CIN if present**.
+  - Use spaCy to find PERSON / ORG / DATE named entities to supplement regex matches.
+- The extracted fields must include a **confidence score for each field** (0.0–1.0).
+  - For example: `{ "name": {"value":"Amit Kumar", "conf":0.92}, "start_date":{"value":"2024-06-01","conf":0.87}, ... }`.
+- After extraction, the frontend must navigate to the **Student Form** page (`/student_form`) and **auto-fill** the form fields with the extracted values.
+  - Any field with `conf < 0.75` must be highlighted in the form and show an inline warning "Low confidence — please verify".
+  - The form should allow the student to manually edit/fix any auto-filled value before final submit.
+- If extraction returns no value for a mandatory field (name, start/end date), show a clear CTA: "Please enter missing fields or re-upload clearer scan".
+- Store raw uploaded file and the extracted JSON in `uploads/` and `uploads/db/` for audit.
+
+B. Pages & Navigation (separate pages)
+- Navbar on top across all pages with links: `Home`, `Upload Certificate`, `Student Form`, `Mentor Login`.
+- Pages:
+  1. `/` (Home) — short product summary + quick links to Upload and Mentor login.
+  2. `/upload` (File Upload Page) — upload input + paste-text area + "Extract & Open Form" button.
+     - Show extraction progress steps: Received → OCR → Extracting fields → Done.
+     - After extraction, automatically redirect to `/student_form?from_upload=1&upload_id=<id>` and auto-fill form.
+  3. `/student_form` (Student Form Page) — full student form (APAAR ID, Name, Institution Code, Organization, Title, Start/End Date, Total Hours, Level, Text area for logs) with auto-fill support. Must show per-field confidence badges and inline edit.
+     - Submit button triggers the full pipeline (CEESCM → WMD → Credit Computation → optionally auto push to ABC simulator depending on policy).
+  4. `/mentor` (Mentor Login) — simple login prompt (hard-coded demo creds in README: username `mentor`, password `mentorpass`) and on success go to Mentor Dashboard.
+     - Mentor Dashboard shows incoming submissions flagged for review (including low-confidence extractions and Partially Equivalent results). Mentor can open an item, edit fields, add equivalent keywords, re-run matching and push to ABC simulator.
+
+C. API & Backend endpoints (document and implement)
+- `POST /api/upload_certificate` — accepts multipart file or text; returns `upload_id` and extracted-fields JSON with confidences and a `redirect_url` to `/student_form`.
+- `GET /api/upload/{upload_id}` — returns stored raw file metadata + extracted JSON.
+- `POST /api/submit_internship` — accepts completed/edited student form (multipart if including original file reference); returns `internship_id` and kicks off full processing pipeline (CEESCM → WMD).
+- `GET /api/internship/{id}` — returns stored record + audit (matches, composite, credits).
+- `POST /api/mentor/run_and_push` — run matching with optional keywords; optionally push to ABC simulator.
+- `POST /api/abc/upload` — connector to ABC simulator (internal).
+- `GET /api/abc/status/{abc_token}` — simulator status.
+
+D. Extraction details (how to detect fields)
+- Implement a prioritized detection strategy:
+  1. Simple regexes for typical patterns:
+     - Dates: dd/mm/yyyy, dd-mm-yyyy, yyyy-mm-dd, Month dd, yyyy
+     - Hours: look for "hours", "hrs"
+     - APAAR-like IDs: pattern `APAAR[-_]?[A-Z0-9-]+` (if present)
+     - Certificate IDs: `CERT-?[\dA-Za-z-]+`
+     - GST/CIN: common formats (GST: 15 alnum; CIN roughly 21 alnum pattern). Use regex heuristics.
+  2. NER via spaCy: PERSON → candidate student name; ORG → candidate organization; DATE → dates.
+  3. Heuristics & proximity: the name often near phrases like "This is to certify that", "has completed the internship", "student", etc. Use those anchors to boost confidence.
+  4. Fall back: If multiple candidates, pick the one with highest aggregate score (regex hit + NER hit + proximity).
+- Provide a small `extractor.py` module with functions:
+  - `extract_from_text(text) -> dict_of_fields_with_confidences`
+  - `extract_from_file(path) -> same` (handles OCR for images/PDF)
+- Add unit tests for `extract_from_text` with 3 sample certificate texts in `tests/`.
+
+E. Human-in-loop & Confidence rules
+- If any mandatory field conf < 0.75 OR WMD composite < 0.55 → mark submission as `needs_review` and send to Mentor queue.
+- Mentor dashboard must allow manual approve, reject, or edit+resubmit flows.
+- Audit logs stored per action (who changed what & timestamp).
+
+F. Auto-Fill UX details (frontend behavior)
+- After upload & extraction, redirect to Student Form and animate the fields being filled (nice UX).
+- Add an "Auto-Fill Confidence" indicator at top: `All fields high confidence ✅` or `Some fields require your attention ⚠️`.
+- If student edits a field, mark it as "verified by student".
+- If student submits without fixing low-confidence fields, show a modal: "Are you sure? Some fields were auto-detected with low confidence."
+
+G. Data persistence & storage
+- Save each internship to a JSON file under `uploads/db/<internship_id>.json` containing:
+  - form data, extracted fields + confidences, CEESCM tokens (sample), WMD matches, composite score, credit calc, abc payload/response, changelog.
+- Save uploaded files in `uploads/files/` and generated PDF reports in `uploads/reports/`.
+
+H. ABC Simulator & auto-upload logic
+- ABC simulator endpoint `/abc_simulator/upload` that returns deterministic `abc_token` (prefix ABC-TOK- + first 12 chars of sha256(payload)).
+- Auto push rules:
+  - If decision == Equivalent and eligible == True and extraction confidences >= 0.75, the system should auto-push to ABC simulator and show abc_token to the student on final page.
+  - Otherwise, leave push to mentor (mentor can push after manual review).
+
+I. Tests, sample files & README
+- Add `uploads/samples/` folder with:
+  - `sample_cert_text.txt` (plain text certificate)
+  - `sample_cert_searchable.pdf` (searchable sample)
+  - `sample_cert_scan.jpg` (scanned image sample)
+- Provide `test_extract.py` and `test_wmd.py` showing usage and expected outputs.
+- README should contain exact pip commands, Tesseract install steps for Windows & Linux, spaCy model commands, and how to run.
+
+J. UI pages & flow summary (for builder to implement)
+- Navbar: Home | Upload Certificate | Student Form | Mentor Login
+- Upload Certificate page (`/upload`) — upload file or paste text, extract & redirect to student form
+- Student Form page (`/student_form`) — auto-filled, editable, submit to process pipeline
+- Mentor Login & Dashboard (`/mentor`) — review queue + actions
+- Student Result page — final summary + Download Report link
+
+K. Security & small extras
+- Demo mentor auth: basic hard-coded (no DB needed). Document creds in README.
+- CSRF not required for demo, but mention in README for production.
+- Respect privacy: show a "Delete my data" button on student result to remove their files & JSON (demo action should delete files).
+
+L. Quality & deliverables
+- Code must be modular, commented, and include clear points where a dev can replace ABC simulator with real ABC API.
+- Output must be deterministic and testable locally.
+- Provide a zip or repo layout and verification steps.
+
+END OF PROMPT: Build exactly as above. If any heavy model (GoogleNews) cannot be included, implement a robust spaCy-based fallback and demonstrate with `test_wmd.py`. Keep UI styling minimal but usable; focus on exact functionality.
+

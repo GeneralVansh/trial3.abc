@@ -1,0 +1,60 @@
+{
+  "upload_id": "c0c3a0ce-b6aa-4daa-8ed4-55b4d6cccd6d",
+  "filename": "c0c3a0ce-b6aa-4daa-8ed4-55b4d6cccd6d_20251103_054622_Engineering-Internship-Certificate-Template-edit-online.png",
+  "filepath": "uploads/files/c0c3a0ce-b6aa-4daa-8ed4-55b4d6cccd6d_20251103_054622_Engineering-Internship-Certificate-Template-edit-online.png",
+  "timestamp": "20251103_054622",
+  "extracted_fields": {
+    "apaar_id": {
+      "value": "",
+      "conf": 0.0
+    },
+    "cert_id": {
+      "value": "IFICATE",
+      "conf": 0.8
+    },
+    "gst": {
+      "value": "",
+      "conf": 0.0
+    },
+    "cin": {
+      "value": "",
+      "conf": 0.0
+    },
+    "hours": {
+      "value": "",
+      "conf": 0.0
+    },
+    "institution_code": {
+      "value": "",
+      "conf": 0.0
+    },
+    "start_date": {
+      "value": "",
+      "conf": 0.0
+    },
+    "end_date": {
+      "value": "",
+      "conf": 0.0
+    },
+    "name": {
+      "value": "Emma Davis",
+      "conf": 0.8999999999999999
+    },
+    "organization": {
+      "value": "Engineering Student Internship Program",
+      "conf": 0.8
+    },
+    "internship_title": {
+      "value": "",
+      "conf": 0.0
+    },
+    "signatory_name": {
+      "value": "Michael Lee",
+      "conf": 0.7
+    },
+    "signatory_email": {
+      "value": "",
+      "conf": 0.0
+    }
+  }
+}

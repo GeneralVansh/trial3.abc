@@ -1,0 +1,117 @@
+{
+  "internship_id": "55eabf11-e7e1-44ab-83aa-1d9a27b5df1f",
+  "timestamp": "2025-10-30T12:09:19.024153",
+  "form_data": {
+    "name": "william aderson",
+    "apaar_id": "45678765",
+    "institution_code": "5676543o",
+    "organization": "Technical Support and Development Team at TechPro Solutions",
+    "internship_title": "strong legal research",
+    "start_date": "2050-01-10",
+    "end_date": "2050-04-15",
+    "hours": "400",
+    "level": "Intermediate",
+    "logs": "teri ma ki cht"
+  },
+  "field_confidences": {
+    "name": {
+      "value": "william aderson",
+      "conf": 1
+    },
+    "apaar_id": {
+      "value": "45678765",
+      "conf": 1
+    },
+    "institution_code": {
+      "value": "5676543o",
+      "conf": 1
+    },
+    "organization": {
+      "value": "Technical Support and Development Team at TechPro Solutions",
+      "conf": 0.8
+    },
+    "internship_title": {
+      "value": "strong legal research",
+      "conf": 1
+    },
+    "start_date": {
+      "value": "2050-01-10",
+      "conf": 0.8
+    },
+    "end_date": {
+      "value": "2050-04-15",
+      "conf": 0.8
+    },
+    "hours": {
+      "value": "400",
+      "conf": 1
+    }
+  },
+  "upload_id": "47c37f51-f85d-469d-83df-e558885e5f50",
+  "ceescm_tokens": [
+    "technical",
+    "support",
+    "development",
+    "team",
+    "techpro",
+    "solution",
+    "strong",
+    "legal",
+    "research",
+    "teri",
+    "cht"
+  ],
+  "wmd_matches": [
+    {
+      "course_id": "CS304",
+      "course_title": "Mobile App Development",
+      "similarity": 0.586,
+      "keywords_matched": []
+    },
+    {
+      "course_id": "CS306",
+      "course_title": "Backend Development",
+      "similarity": 0.525,
+      "keywords_matched": []
+    },
+    {
+      "course_id": "CS305",
+      "course_title": "Cloud Computing",
+      "similarity": 0.472,
+      "keywords_matched": []
+    },
+    {
+      "course_id": "CS302",
+      "course_title": "Database Management Systems",
+      "similarity": 0.468,
+      "keywords_matched": []
+    },
+    {
+      "course_id": "CS301",
+      "course_title": "Web Development Fundamentals",
+      "similarity": 0.456,
+      "keywords_matched": []
+    },
+    {
+      "course_id": "CS303",
+      "course_title": "Machine Learning Basics",
+      "similarity": 0.398,
+      "keywords_matched": []
+    }
+  ],
+  "wmd_composite": 0.528,
+  "decision": "Partially Equivalent",
+  "credits": 2,
+  "eligible": false,
+  "needs_review": true,
+  "auto_push": false,
+  "abc_token": null,
+  "abc_status": null,
+  "changelog": [
+    {
+      "timestamp": "2025-10-30T12:09:19.024153",
+      "action": "created",
+      "by": "student"
+    }
+  ]
+}

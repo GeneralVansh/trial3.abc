@@ -1,0 +1,60 @@
+{
+  "upload_id": "ff115791-d20b-47d1-ad7a-1c3adfb22754",
+  "filename": "ff115791-d20b-47d1-ad7a-1c3adfb22754_20251031_180314_INT-1761646487524_audit_report.pdf",
+  "filepath": "uploads/files/ff115791-d20b-47d1-ad7a-1c3adfb22754_20251031_180314_INT-1761646487524_audit_report.pdf",
+  "timestamp": "20251031_180314",
+  "extracted_fields": {
+    "apaar_id": {
+      "value": "",
+      "conf": 0.0
+    },
+    "cert_id": {
+      "value": "Proudly",
+      "conf": 0.8
+    },
+    "gst": {
+      "value": "",
+      "conf": 0.0
+    },
+    "cin": {
+      "value": "",
+      "conf": 0.0
+    },
+    "hours": {
+      "value": "8342",
+      "conf": 0.85
+    },
+    "institution_code": {
+      "value": "500888",
+      "conf": 0.8
+    },
+    "start_date": {
+      "value": "2024-08-31",
+      "conf": 0.8
+    },
+    "end_date": {
+      "value": "2025-06-26",
+      "conf": 0.8
+    },
+    "name": {
+      "value": "Rachel Edwards",
+      "conf": 0.8999999999999999
+    },
+    "organization": {
+      "value": "Professional Communication and Technical 0.7538 Equivalent",
+      "conf": 0.8
+    },
+    "internship_title": {
+      "value": "",
+      "conf": 0.0
+    },
+    "signatory_name": {
+      "value": "Charles Adams Elg'-'llil",
+      "conf": 0.7
+    },
+    "signatory_email": {
+      "value": "",
+      "conf": 0.0
+    }
+  }
+}

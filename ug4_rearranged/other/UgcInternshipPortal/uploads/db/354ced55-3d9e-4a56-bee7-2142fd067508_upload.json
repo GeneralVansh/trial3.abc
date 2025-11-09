@@ -1,0 +1,60 @@
+{
+  "upload_id": "354ced55-3d9e-4a56-bee7-2142fd067508",
+  "filename": "354ced55-3d9e-4a56-bee7-2142fd067508_20251031_173758_canva-white-gray-minimalist-internship-certificate-C4fJctm-scU.jpg",
+  "filepath": "uploads/files/354ced55-3d9e-4a56-bee7-2142fd067508_20251031_173758_canva-white-gray-minimalist-internship-certificate-C4fJctm-scU.jpg",
+  "timestamp": "20251031_173758",
+  "extracted_fields": {
+    "apaar_id": {
+      "value": "",
+      "conf": 0.0
+    },
+    "cert_id": {
+      "value": "ificate",
+      "conf": 0.8
+    },
+    "gst": {
+      "value": "",
+      "conf": 0.0
+    },
+    "cin": {
+      "value": "",
+      "conf": 0.0
+    },
+    "hours": {
+      "value": "",
+      "conf": 0.0
+    },
+    "institution_code": {
+      "value": "",
+      "conf": 0.0
+    },
+    "start_date": {
+      "value": "",
+      "conf": 0.0
+    },
+    "end_date": {
+      "value": "",
+      "conf": 0.0
+    },
+    "name": {
+      "value": "Drew Feig",
+      "conf": 0.8999999999999999
+    },
+    "organization": {
+      "value": "Timmerman Construction Co.",
+      "conf": 0.8
+    },
+    "internship_title": {
+      "value": "",
+      "conf": 0.0
+    },
+    "signatory_name": {
+      "value": "Reese Miller",
+      "conf": 0.7
+    },
+    "signatory_email": {
+      "value": "",
+      "conf": 0.0
+    }
+  }
+}

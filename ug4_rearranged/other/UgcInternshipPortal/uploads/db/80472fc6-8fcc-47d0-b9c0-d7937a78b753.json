@@ -1,0 +1,113 @@
+{
+  "internship_id": "80472fc6-8fcc-47d0-b9c0-d7937a78b753",
+  "timestamp": "2025-10-31T18:03:55.865865",
+  "form_data": {
+    "name": "Rachel Edwards",
+    "apaar_id": "vbnnbv",
+    "institution_code": "500888",
+    "organization": "Professional Communication and Technical 0.7538 Equivalent",
+    "internship_title": "xcvbngfd",
+    "start_date": "2024-08-31",
+    "end_date": "2025-06-26",
+    "hours": "8342",
+    "level": "Advanced",
+    "logs": "cvbbvcx"
+  },
+  "field_confidences": {
+    "name": {
+      "value": "Rachel Edwards",
+      "conf": 0.8999999999999999
+    },
+    "apaar_id": {
+      "value": "vbnnbv",
+      "conf": 1
+    },
+    "institution_code": {
+      "value": "500888",
+      "conf": 0.8
+    },
+    "organization": {
+      "value": "Professional Communication and Technical 0.7538 Equivalent",
+      "conf": 0.8
+    },
+    "internship_title": {
+      "value": "xcvbngfd",
+      "conf": 1
+    },
+    "start_date": {
+      "value": "2024-08-31",
+      "conf": 0.8
+    },
+    "end_date": {
+      "value": "2025-06-26",
+      "conf": 0.8
+    },
+    "hours": {
+      "value": "8342",
+      "conf": 0.85
+    }
+  },
+  "upload_id": "ff115791-d20b-47d1-ad7a-1c3adfb22754",
+  "ceescm_tokens": [
+    "professional",
+    "communication",
+    "technical",
+    "7538",
+    "equivalent",
+    "xcvbngfd",
+    "cvbbvcx"
+  ],
+  "wmd_matches": [
+    {
+      "course_id": "CS304",
+      "course_title": "Mobile App Development",
+      "similarity": 0.515,
+      "keywords_matched": []
+    },
+    {
+      "course_id": "CS306",
+      "course_title": "Backend Development",
+      "similarity": 0.455,
+      "keywords_matched": []
+    },
+    {
+      "course_id": "CS305",
+      "course_title": "Cloud Computing",
+      "similarity": 0.425,
+      "keywords_matched": []
+    },
+    {
+      "course_id": "CS301",
+      "course_title": "Web Development Fundamentals",
+      "similarity": 0.416,
+      "keywords_matched": []
+    },
+    {
+      "course_id": "CS302",
+      "course_title": "Database Management Systems",
+      "similarity": 0.369,
+      "keywords_matched": []
+    },
+    {
+      "course_id": "CS303",
+      "course_title": "Machine Learning Basics",
+      "similarity": 0.355,
+      "keywords_matched": []
+    }
+  ],
+  "wmd_composite": 0.465,
+  "decision": "Partially Equivalent",
+  "credits": 2,
+  "eligible": false,
+  "needs_review": true,
+  "auto_push": false,
+  "abc_token": null,
+  "abc_status": null,
+  "changelog": [
+    {
+      "timestamp": "2025-10-31T18:03:55.865865",
+      "action": "created",
+      "by": "student"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "test-intern-001": {
+    "internship_id": "test-intern-001",
+    "abc_token": "ABC-2024-MH-123456-a1b2c3d4",
+    "apaar_id": "2024-MH-123456",
+    "student_name": "Amit Kumar",
+    "student_email": "amit.kumar@example.com",
+    "organization": "Tech Innovations Pvt Ltd",
+    "internship_title": "Full Stack Web Development",
+    "start_date": "2024-06-01",
+    "end_date": "2024-08-31",
+    "hours": 320,
+    "credits_awarded": 4,
+    "matched_course": "Backend Development",
+    "wmd_score": 0.621,
+    "status": "Approved",
+    "approved_by": "Mentor",
+    "approved_at": "2024-11-03T10:30:00",
+    "report_path": "uploads/reports/test-intern-001.pdf",
+    "notes": "Excellent work on backend development internship"
+  }
+}

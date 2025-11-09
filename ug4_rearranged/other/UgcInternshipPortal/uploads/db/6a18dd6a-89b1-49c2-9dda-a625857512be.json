@@ -1,0 +1,113 @@
+{
+  "internship_id": "6a18dd6a-89b1-49c2-9dda-a625857512be",
+  "timestamp": "2025-10-31T17:41:47.855279",
+  "form_data": {
+    "name": "Drew Feig",
+    "apaar_id": "45678765",
+    "institution_code": "45678987654",
+    "organization": "Timmerman Construction Co.",
+    "internship_title": "software cloud",
+    "start_date": "2024-06-30",
+    "end_date": "2025-06-23",
+    "hours": "250",
+    "level": "Intermediate",
+    "logs": "dfghhgfd"
+  },
+  "field_confidences": {
+    "name": {
+      "value": "Drew Feig",
+      "conf": 0.8999999999999999
+    },
+    "apaar_id": {
+      "value": "45678765",
+      "conf": 1
+    },
+    "institution_code": {
+      "value": "45678987654",
+      "conf": 1
+    },
+    "organization": {
+      "value": "Timmerman Construction Co.",
+      "conf": 0.8
+    },
+    "internship_title": {
+      "value": "software cloud",
+      "conf": 1
+    },
+    "start_date": {
+      "value": "2024-06-30",
+      "conf": 1
+    },
+    "end_date": {
+      "value": "2025-06-23",
+      "conf": 1
+    },
+    "hours": {
+      "value": "250",
+      "conf": 1
+    }
+  },
+  "upload_id": "354ced55-3d9e-4a56-bee7-2142fd067508",
+  "ceescm_tokens": [
+    "timmerman",
+    "construction",
+    "software",
+    "cloud",
+    "dfghhgfd"
+  ],
+  "wmd_matches": [
+    {
+      "course_id": "CS305",
+      "course_title": "Cloud Computing",
+      "similarity": 0.565,
+      "keywords_matched": [
+        "cloud"
+      ]
+    },
+    {
+      "course_id": "CS306",
+      "course_title": "Backend Development",
+      "similarity": 0.564,
+      "keywords_matched": []
+    },
+    {
+      "course_id": "CS304",
+      "course_title": "Mobile App Development",
+      "similarity": 0.558,
+      "keywords_matched": []
+    },
+    {
+      "course_id": "CS302",
+      "course_title": "Database Management Systems",
+      "similarity": 0.528,
+      "keywords_matched": []
+    },
+    {
+      "course_id": "CS301",
+      "course_title": "Web Development Fundamentals",
+      "similarity": 0.454,
+      "keywords_matched": []
+    },
+    {
+      "course_id": "CS303",
+      "course_title": "Machine Learning Basics",
+      "similarity": 0.433,
+      "keywords_matched": []
+    }
+  ],
+  "wmd_composite": 0.562,
+  "decision": "Partially Equivalent",
+  "credits": 2,
+  "eligible": false,
+  "needs_review": false,
+  "auto_push": false,
+  "abc_token": null,
+  "abc_status": null,
+  "changelog": [
+    {
+      "timestamp": "2025-10-31T17:41:47.855279",
+      "action": "created",
+      "by": "student"
+    }
+  ]
+}

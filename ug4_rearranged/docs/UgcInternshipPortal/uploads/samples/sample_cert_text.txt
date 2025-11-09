@@ -1,0 +1,31 @@
+CERTIFICATE OF INTERNSHIP COMPLETION
+
+This is to certify that Amit Kumar, APAAR ID: APAAR-2024-MH-123456, from Institution Code: INST-MH-789, has successfully completed an internship at Tech Innovations Pvt Ltd.
+
+Internship Details:
+Position: Full Stack Web Developer Intern
+Duration: June 1, 2024 to August 31, 2024
+Total Hours: 320 hours
+
+During this internship, Amit worked on multiple web development projects using React, Node.js, and MongoDB. He contributed to the development of a customer portal, implemented RESTful APIs, and worked on database optimization. His work included frontend development with React, backend API development with Express.js, and integration with third-party services.
+
+Key Achievements:
+- Developed responsive user interfaces using React and Bootstrap
+- Implemented authentication and authorization systems
+- Created and documented RESTful APIs
+- Participated in code reviews and agile sprint planning
+- Collaborated with cross-functional teams
+
+Certificate ID: CERT-TI-2024-089
+Company GST: 27AABCT1234E1Z5
+Company CIN: U72900MH2010PTC123456
+
+Authorized Signatory:
+Rajesh Sharma
+HR Manager
+rajesh.sharma@techinnovations.com
+
+Date: September 5, 2024
+
+Tech Innovations Pvt Ltd
+Mumbai, Maharashtra

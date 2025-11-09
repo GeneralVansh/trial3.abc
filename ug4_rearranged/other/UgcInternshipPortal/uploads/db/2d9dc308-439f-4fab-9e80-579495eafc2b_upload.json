@@ -1,0 +1,60 @@
+{
+  "upload_id": "2d9dc308-439f-4fab-9e80-579495eafc2b",
+  "filename": "2d9dc308-439f-4fab-9e80-579495eafc2b_20251029_140813_s23.pdf",
+  "filepath": "uploads/files/2d9dc308-439f-4fab-9e80-579495eafc2b_20251029_140813_s23.pdf",
+  "timestamp": "20251029_140813",
+  "extracted_fields": {
+    "name": {
+      "value": "",
+      "conf": 0.0
+    },
+    "apaar_id": {
+      "value": "",
+      "conf": 0.0
+    },
+    "institution_code": {
+      "value": "",
+      "conf": 0.0
+    },
+    "organization": {
+      "value": "",
+      "conf": 0.0
+    },
+    "internship_title": {
+      "value": "",
+      "conf": 0.0
+    },
+    "start_date": {
+      "value": "",
+      "conf": 0.0
+    },
+    "end_date": {
+      "value": "",
+      "conf": 0.0
+    },
+    "hours": {
+      "value": "",
+      "conf": 0.0
+    },
+    "cert_id": {
+      "value": "",
+      "conf": 0.0
+    },
+    "signatory_name": {
+      "value": "",
+      "conf": 0.0
+    },
+    "signatory_email": {
+      "value": "",
+      "conf": 0.0
+    },
+    "gst": {
+      "value": "",
+      "conf": 0.0
+    },
+    "cin": {
+      "value": "",
+      "conf": 0.0
+    }
+  }
+}

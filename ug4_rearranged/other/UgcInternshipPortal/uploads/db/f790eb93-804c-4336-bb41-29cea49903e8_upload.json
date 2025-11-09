@@ -1,0 +1,60 @@
+{
+  "upload_id": "f790eb93-804c-4336-bb41-29cea49903e8",
+  "filename": "f790eb93-804c-4336-bb41-29cea49903e8_20251102_171045_Technical-Internship-Certificate-Template-edit-online.png",
+  "filepath": "uploads/files/f790eb93-804c-4336-bb41-29cea49903e8_20251102_171045_Technical-Internship-Certificate-Template-edit-online.png",
+  "timestamp": "20251102_171045",
+  "extracted_fields": {
+    "apaar_id": {
+      "value": "",
+      "conf": 0.0
+    },
+    "cert_id": {
+      "value": "ificate",
+      "conf": 0.8
+    },
+    "gst": {
+      "value": "",
+      "conf": 0.0
+    },
+    "cin": {
+      "value": "",
+      "conf": 0.0
+    },
+    "hours": {
+      "value": "",
+      "conf": 0.0
+    },
+    "institution_code": {
+      "value": "",
+      "conf": 0.0
+    },
+    "start_date": {
+      "value": "2050-01-10",
+      "conf": 0.8
+    },
+    "end_date": {
+      "value": "2050-04-15",
+      "conf": 0.8
+    },
+    "name": {
+      "value": "Mark Davis",
+      "conf": 0.7
+    },
+    "organization": {
+      "value": "Technical Support and Development Team at TechPro Solutions",
+      "conf": 0.8
+    },
+    "internship_title": {
+      "value": "",
+      "conf": 0.0
+    },
+    "signatory_name": {
+      "value": "Mark Davis",
+      "conf": 0.7
+    },
+    "signatory_email": {
+      "value": "",
+      "conf": 0.0
+    }
+  }
+}

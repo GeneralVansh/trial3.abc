@@ -1,0 +1,60 @@
+{
+  "upload_id": "75fc606d-5a0f-4711-9b90-2fb65b2aec25",
+  "filename": "75fc606d-5a0f-4711-9b90-2fb65b2aec25_20251102_171107_Student-Internship-Certificate-Template.jpeg",
+  "filepath": "uploads/files/75fc606d-5a0f-4711-9b90-2fb65b2aec25_20251102_171107_Student-Internship-Certificate-Template.jpeg",
+  "timestamp": "20251102_171107",
+  "extracted_fields": {
+    "apaar_id": {
+      "value": "",
+      "conf": 0.0
+    },
+    "cert_id": {
+      "value": "IFICATE",
+      "conf": 0.8
+    },
+    "gst": {
+      "value": "",
+      "conf": 0.0
+    },
+    "cin": {
+      "value": "",
+      "conf": 0.0
+    },
+    "hours": {
+      "value": "",
+      "conf": 0.0
+    },
+    "institution_code": {
+      "value": "",
+      "conf": 0.0
+    },
+    "start_date": {
+      "value": "2025-05-30",
+      "conf": 0.8
+    },
+    "end_date": {
+      "value": "2025-06-02",
+      "conf": 0.8
+    },
+    "name": {
+      "value": "Charmaine Williams",
+      "conf": 0.8999999999999999
+    },
+    "organization": {
+      "value": "Alita Technologies\n\nINTERNSHIP CERTIFICATE\n\n",
+      "conf": 0.8
+    },
+    "internship_title": {
+      "value": "",
+      "conf": 0.0
+    },
+    "signatory_name": {
+      "value": "Janice Clarkson",
+      "conf": 0.7
+    },
+    "signatory_email": {
+      "value": "",
+      "conf": 0.0
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "upload_id": "518cf5a6-e498-4225-8115-dba6b580ba6a",
+  "filename": "518cf5a6-e498-4225-8115-dba6b580ba6a_20251029_141230_Get_and_Edit_this_Internship_Certificate_Templates_Free_Landscape_b2895a271a.png",
+  "filepath": "uploads/files/518cf5a6-e498-4225-8115-dba6b580ba6a_20251029_141230_Get_and_Edit_this_Internship_Certificate_Templates_Free_Landscape_b2895a271a.png",
+  "timestamp": "20251029_141230",
+  "extracted_fields": {
+    "apaar_id": {
+      "value": "",
+      "conf": 0.0
+    },
+    "cert_id": {
+      "value": "Proudly",
+      "conf": 0.8
+    },
+    "gst": {
+      "value": "",
+      "conf": 0.0
+    },
+    "cin": {
+      "value": "",
+      "conf": 0.0
+    },
+    "hours": {
+      "value": "",
+      "conf": 0.0
+    },
+    "institution_code": {
+      "value": "",
+      "conf": 0.0
+    },
+    "start_date": {
+      "value": "2024-08-31",
+      "conf": 0.75
+    },
+    "end_date": {
+      "value": "",
+      "conf": 0.0
+    },
+    "name": {
+      "value": "Rachel Edwards",
+      "conf": 0.8999999999999999
+    },
+    "organization": {
+      "value": "j'Corter & Mills\n\nInternship Completion Certificate\n\nProudly",
+      "conf": 0.8
+    },
+    "internship_title": {
+      "value": "",
+      "conf": 0.0
+    },
+    "signatory_name": {
+      "value": "Charles Adams Elg'-'llil",
+      "conf": 0.7
+    },
+    "signatory_email": {
+      "value": "",
+      "conf": 0.0
+    }
+  }
+}

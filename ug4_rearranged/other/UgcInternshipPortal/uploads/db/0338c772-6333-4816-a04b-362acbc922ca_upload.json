@@ -1,0 +1,60 @@
+{
+  "upload_id": "0338c772-6333-4816-a04b-362acbc922ca",
+  "filename": "0338c772-6333-4816-a04b-362acbc922ca_20251031_175403_free-custom-printable-internship-certificate-templates-canva_2.jpg",
+  "filepath": "uploads/files/0338c772-6333-4816-a04b-362acbc922ca_20251031_175403_free-custom-printable-internship-certificate-templates-canva_2.jpg",
+  "timestamp": "20251031_175403",
+  "extracted_fields": {
+    "apaar_id": {
+      "value": "",
+      "conf": 0.0
+    },
+    "cert_id": {
+      "value": "IFICATE",
+      "conf": 0.8
+    },
+    "gst": {
+      "value": "",
+      "conf": 0.0
+    },
+    "cin": {
+      "value": "",
+      "conf": 0.0
+    },
+    "hours": {
+      "value": "",
+      "conf": 0.0
+    },
+    "institution_code": {
+      "value": "",
+      "conf": 0.0
+    },
+    "start_date": {
+      "value": "",
+      "conf": 0.0
+    },
+    "end_date": {
+      "value": "",
+      "conf": 0.0
+    },
+    "name": {
+      "value": "Murad Naser",
+      "conf": 0.8999999999999999
+    },
+    "organization": {
+      "value": "Home Internship",
+      "conf": 0.8
+    },
+    "internship_title": {
+      "value": "",
+      "conf": 0.0
+    },
+    "signatory_name": {
+      "value": "Aaron Loeb Olivia Wilson",
+      "conf": 0.7
+    },
+    "signatory_email": {
+      "value": "",
+      "conf": 0.0
+    }
+  }
+}

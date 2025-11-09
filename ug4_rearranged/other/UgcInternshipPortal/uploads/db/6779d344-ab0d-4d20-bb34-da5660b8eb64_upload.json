@@ -1,0 +1,60 @@
+{
+  "upload_id": "6779d344-ab0d-4d20-bb34-da5660b8eb64",
+  "filename": "6779d344-ab0d-4d20-bb34-da5660b8eb64_20251031_112734_R.jpg",
+  "filepath": "uploads/files/6779d344-ab0d-4d20-bb34-da5660b8eb64_20251031_112734_R.jpg",
+  "timestamp": "20251031_112734",
+  "extracted_fields": {
+    "apaar_id": {
+      "value": "",
+      "conf": 0.0
+    },
+    "cert_id": {
+      "value": "",
+      "conf": 0.0
+    },
+    "gst": {
+      "value": "",
+      "conf": 0.0
+    },
+    "cin": {
+      "value": "",
+      "conf": 0.0
+    },
+    "hours": {
+      "value": "",
+      "conf": 0.0
+    },
+    "institution_code": {
+      "value": "",
+      "conf": 0.0
+    },
+    "start_date": {
+      "value": "",
+      "conf": 0.0
+    },
+    "end_date": {
+      "value": "",
+      "conf": 0.0
+    },
+    "name": {
+      "value": "Fantochs Loarnng",
+      "conf": 0.7
+    },
+    "organization": {
+      "value": "",
+      "conf": 0.0
+    },
+    "internship_title": {
+      "value": "",
+      "conf": 0.0
+    },
+    "signatory_name": {
+      "value": "Fantochs Loarnng",
+      "conf": 0.7
+    },
+    "signatory_email": {
+      "value": "",
+      "conf": 0.0
+    }
+  }
+}
